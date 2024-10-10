@@ -1,0 +1,101 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative; /* Added for proper positioning of the ::before element */
+  background-image: url('../../../images/backgroundpic.jpeg');
+  background-size: cover;
+  background-position: center; 
+}
+.h3-login {
+  color: #ff0000; /* Change to desired color */
+  margin-bottom: 1rem; /* Space below the heading */
+  z-index: 3; /* Higher z-index to ensure visibility */
+  position: relative; /* Set positioning context */
+}
+
+.main-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../../../images/backgroundpic.jpeg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px);
+  z-index: 1;
+}
+
+.form-container {
+  padding: 4rem 2rem;
+  border: 6px solid #ff0000;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Ensure the form is above the blurred background */
+  z-index: 2; /* Set z-index higher than the blurred background */
+}
+
+.form-container > div {
+  margin-bottom: 12px;
+}
+
+.form-group {
+  display: flex;
+}
+
+.form-group label {
+  width: 70px;
+  margin-right: 8px;
+  text-align: left;
+}
+
+.errors {
+  color: red;
+  font-size: 12px;
+}
+
+.submit-container {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.register-container {
+  text-align: center;
+}
+
+.show-password {
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.login-button {
+  background-color: #ff0000;
+  color: #ffffff;
+  padding: 0.55rem 1.2rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  width: 100%;
+  z-index: 2; /* Ensure button is above the blurred background */
+}
+
+.login-button:hover {
+  background-color: #ffffff;
+  color: #ff0000;
+  border: 2px solid #ff8383;  
+}
+
+.login-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.5);
+}

@@ -1,0 +1,121 @@
+.register-main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+.register-main-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../../../images/backgroundpic.jpeg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px);
+    z-index: 1;
+}
+
+.register-main-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    
+    z-index: 1;
+}
+
+.h3-register {
+    color: #ff0000; /* Change to desired color */
+    margin-bottom: 1rem; /* Space below the heading */
+    z-index: 3; /* Higher z-index to ensure visibility */
+    position: relative; /* Set positioning context */
+  }
+
+.register-form-container {
+    position: relative;
+    padding: 2rem 2.5rem;
+    border: 6px solid #ff0000;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 25%;
+    height: auto;
+    z-index: 2;
+}
+
+
+.register-form-group {
+    display: flex;
+    flex-direction: column;
+    width: 65%; 
+}
+
+
+.register-form-group label {
+    margin-bottom: 5px; 
+    font-weight: 60px; 
+    color: #000000; 
+}
+
+.register-errors {
+    color: red;
+    font-size: 12px;
+}
+
+.register-submit-container {
+    margin-top: 1rem; 
+    text-align: center;
+}
+
+.register-login-container {
+    margin-top: 1rem; 
+    text-align: center;
+    font-size: 14px; 
+}
+
+.form-container-register {
+    padding: 4rem 2rem;
+    border: 1px solid #ae2626;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container-register > div {
+    margin-bottom: 1px;
+}
+
+.register-button {
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 0.60rem 1.2rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    width: 100%;
+    z-index: 2;
+}
+
+.register-button:hover {
+    background-color: #ffffff;
+    color: #ff0000;
+    border: 2px solid #ff8383;
+}
+
+.register-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.5);
+}
